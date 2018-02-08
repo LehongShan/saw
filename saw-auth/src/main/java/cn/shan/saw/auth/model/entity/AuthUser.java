@@ -3,6 +3,7 @@ package cn.shan.saw.auth.model.entity;
 import java.util.Date;
 import java.io.Serializable;
 
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.Version;
 
 import lombok.Data;
@@ -26,6 +27,7 @@ public class AuthUser implements Serializable {
     /**
      * 主键
      */
+    @TableId
     private String authUserId;
     /**
      * 用户名称

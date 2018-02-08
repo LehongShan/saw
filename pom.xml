@@ -99,6 +99,12 @@
         </dependencies>
     </dependencyManagement>
 
+    <modules>
+        <module>saw-auth</module>
+        <module>saw-config</module>
+        <module>saw-eureka</module>
+        <module>saw-sso</module>
+    </modules>
 
     <!-- 使用aliyun镜像 -->
     <repositories>
