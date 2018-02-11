@@ -2,6 +2,7 @@ package cn.shan.saw.auth.model.entity;
 
 import java.io.Serializable;
 
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.Version;
 
 import lombok.Data;
@@ -21,7 +22,7 @@ import lombok.experimental.Accessors;
 public class AuthRoleUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    @TableId
     private String authRoleUserId;
     private String authUserId;
     private String authRoleId;

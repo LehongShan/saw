@@ -17,8 +17,8 @@ public class GeneratorServiceEntity {
     public void generateCode() {
         String packageName = "cn.shan.saw.auth";
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
-        generateByTables(serviceNameStartWithI, packageName, "auth_permission",
-                "auth_permission_role","auth_role","auth_role_user","auth_user");
+        generateByTables(serviceNameStartWithI, packageName, "auth_role_resource",
+                "auth_resource");
     }
 
     private void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {

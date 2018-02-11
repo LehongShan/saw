@@ -15,19 +15,19 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author shanlehong
- * @since 2018-02-07
+ * @since 2018-02-09
  */
 @Data
 @Accessors(chain = true)
-public class AuthRole implements Serializable {
+public class AuthResource implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @TableId
-    private String authRoleId;
+    private String authResourceId;
     /**
-     * 角色名称
+     * 资源URL
      */
-    private String name;
+    private String url;
 
 
 }
