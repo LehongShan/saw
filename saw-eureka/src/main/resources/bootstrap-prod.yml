@@ -9,7 +9,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
   instance:
-    hostname: localhost
+    hostname: 47.97.189.34
 
   server:  #配置属性，但由于 Eureka 自我保护模式以及心跳周期长的原因，经常会遇到 Eureka Server 不剔除已关停的节点的问题
     enable-self-preservation: false

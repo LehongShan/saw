@@ -36,6 +36,8 @@
             <scope>test</scope>
         </dependency>
 
+
+
         <!--注册中心-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -51,6 +53,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
         <!--mybatis-plus 依赖-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -104,6 +107,8 @@
         <module>saw-config</module>
         <module>saw-eureka</module>
         <module>saw-sso</module>
+        <module>saw-shiro</module>
+        <module>saw-common</module>
     </modules>
 
     <!-- 使用aliyun镜像 -->
