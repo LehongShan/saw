@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Value;
 public class RedisAspect {
     private Logger logger = LoggerFactory.getLogger(getClass());
     //是否开启redis缓存  true开启   false关闭
-    @Value("${renren.redis.open: false}")
+    @Value("${saw.redis.open: false}")
     private boolean open;
 
-    @Around("execution(* io.renren.common.utils.RedisUtils.*(..))")
+    @Around("execution(* cn.shan.saw.common.utils.RedisUtils.*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         Object result = null;
         if(open){
