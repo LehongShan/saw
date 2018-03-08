@@ -17,13 +17,14 @@ public class GeneratorServiceEntity {
     public void generateCode() {
         String packageName = "cn.shan.saw.auth";
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
-        generateByTables(serviceNameStartWithI, packageName, "auth_role_resource",
-                "auth_resource");
+        generateByTables(serviceNameStartWithI, packageName, "schedule_job",
+                "schedule_job_log","sys_config","sys_dept","sys_dict","sys_log","sys_menu","sys_role","sys_role_dept",
+                "sys_role_menu","sys_user","sys_user_role");
     }
 
     private void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {
         GlobalConfig config = new GlobalConfig();
-        String dbUrl = "jdbc:mysql://localhost:3306/saw_auth";
+        String dbUrl = "jdbc:mysql://47.97.189.34:3306/saw-admin";
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL)
                 .setUrl(dbUrl)

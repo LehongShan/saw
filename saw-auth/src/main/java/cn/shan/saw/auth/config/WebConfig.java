@@ -17,7 +17,6 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
  * Created by shanlehong on 2018/2/7.
  */
 @ControllerAdvice
-@Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
