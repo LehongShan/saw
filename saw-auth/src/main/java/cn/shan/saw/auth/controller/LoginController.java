@@ -1,6 +1,7 @@
 package cn.shan.saw.auth.controller;
 
 import cn.shan.saw.auth.common.shiro.ShiroUtils;
+import cn.shan.saw.auth.model.vo.Login;
 import cn.shan.saw.common.utils.S;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
@@ -9,6 +10,7 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -50,11 +52,14 @@ public class LoginController {
      */
     @ResponseBody
     @RequestMapping(value = "/sys/login", method = RequestMethod.POST)
-    public S login(String username, String password, String captcha) {
-        String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
+    public S login(@RequestBody Login login) {
+        String username = login.getUsername();
+        String password = login.getPassword();
+
+       /* String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
         if(!captcha.equalsIgnoreCase(kaptcha)){
             return S.error("验证码不正确");
-        }
+        }*/
 
         try{
             Subject subject = ShiroUtils.getSubject();
