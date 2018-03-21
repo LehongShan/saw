@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/saw.iml" filepath="$PROJECT_DIR$/saw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saw-auth/saw-auth.iml" filepath="$PROJECT_DIR$/saw-auth/saw-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saw-config/saw-config.iml" filepath="$PROJECT_DIR$/saw-config/saw-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saw-eureka/saw-eureka.iml" filepath="$PROJECT_DIR$/saw-eureka/saw-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/saw-sso/saw-sso.iml" filepath="$PROJECT_DIR$/saw-sso/saw-sso.iml" />
+    </modules>
+  </component>
+</project>
