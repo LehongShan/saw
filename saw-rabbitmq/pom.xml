@@ -11,7 +11,6 @@
     <modules>
         <module>saw-rabbitmq-sender</module>
         <module>saw-rebbitmq-receive</module>
-        <module>saw-rabbitmq-config</module>
         <module>saw-rabbitmq-common</module>
     </modules>
 

@@ -41,7 +41,7 @@ public class ConsumerConfig implements RabbitListenerConfigurer {
     }
     @Override
     public void configureRabbitListeners(RabbitListenerEndpointRegistrar rabbitListenerEndpointRegistrar) {
-
+        rabbitListenerEndpointRegistrar.setMessageHandlerMethodFactory(handlerMethodFactory());
 
     }
 }

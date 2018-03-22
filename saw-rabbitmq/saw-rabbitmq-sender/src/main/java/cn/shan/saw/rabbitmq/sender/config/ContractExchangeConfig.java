@@ -2,6 +2,7 @@ package cn.shan.saw.rabbitmq.sender.config;
 
 import cn.shan.saw.rabbitmq.common.RabbitMqExchange;
 import cn.shan.saw.rabbitmq.common.RabbitMqQueue;
+import cn.shan.saw.rabbitmq.common.RabbitMqRouterKey;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +55,7 @@ public class ContractExchangeConfig {
         rabbitAdmin.declareQueue(queue);
         return queue;
     }
+
     @Bean
     Queue queueTenant(){
         Queue queue=new Queue(RabbitMqQueue.CONTRACE_TENANT,true);
@@ -61,13 +63,13 @@ public class ContractExchangeConfig {
         return queue;
     }
 
-
     @Bean
     Binding bindingExchangeContract(Queue queueContract, TopicExchange exchange){
         Binding binding= BindingBuilder.bind(queueContract).to(exchange).with(RabbitMqQueue.CONTRACE_SELF);
         rabbitAdmin.declareBinding(binding);
         return binding;
     }
+
 
     @Bean
     Binding bindingExchangeTenant(Queue queueTenant, TopicExchange exchange) {

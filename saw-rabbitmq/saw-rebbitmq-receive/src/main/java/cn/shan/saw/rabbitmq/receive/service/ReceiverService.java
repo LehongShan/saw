@@ -26,7 +26,7 @@ public class ReceiverService {
         }
     }
 
-    @RabbitListener(queues = RabbitMqQueue.CONTRACE_TENANT)
+   /* @RabbitListener(queues = RabbitMqQueue.CONTRACE_TENANT)
     public void receiveTenantQueue(TenantRabbitMq tenant) {
         ObjectMapper objectMapper=new ObjectMapper();
         try {
@@ -34,5 +34,5 @@ public class ReceiverService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }

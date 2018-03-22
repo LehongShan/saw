@@ -6,4 +6,5 @@ package cn.shan.saw.rabbitmq.common;
 public interface RabbitMqQueue {
      String CONTRACE_SELF ="CONTRACT_SELF";
      String CONTRACE_TENANT ="CONTRACT_TENANT";
+
 }

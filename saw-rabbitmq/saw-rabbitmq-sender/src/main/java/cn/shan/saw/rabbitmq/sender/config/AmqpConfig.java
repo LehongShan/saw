@@ -84,6 +84,8 @@ public class AmqpConfig {
                 if (!b){
                     log.debug("发送到queue失败");
                     throw new RuntimeException("send error " + s);
+                }else {
+                    System.out.println("消息成功消费");
                 }
             }
         });

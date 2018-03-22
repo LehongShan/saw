@@ -11,6 +11,8 @@ public class TestRabbitMQ  extends BaseTest{
     @Autowired
     private HelloSender helloSender;
 
+
+
     @Test
     public void testDirectSender(){
         helloSender.sendDirect();
