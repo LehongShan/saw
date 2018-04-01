@@ -1,17 +1,18 @@
 package cn.shan.saw.auth.controller.sys;
 
 
+import cn.shan.saw.auth.model.entity.SysMenu;
 import cn.shan.saw.auth.service.SysMenuService;
 import cn.shan.saw.common.controller.BaseController;
 import cn.shan.saw.common.utils.S;
+import com.baomidou.mybatisplus.mapper.Condition;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
@@ -34,6 +35,11 @@ public class SysMenuController extends BaseController {
     public S querySysMenuList(@RequestParam Map searchMap){
         return RS(sysMenuService.queryAll());
 
+    }
+    @Cacheable(value="testallCache")
+    @GetMapping("/menu/redis/{menuId}")
+    public SysMenu queryRedisMenu(@PathVariable("menuId") Integer menuId){
+       return sysMenuService.selectOne(Condition.create().and("menu_id = "+menuId));
     }
 
 

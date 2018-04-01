@@ -1,5 +1,6 @@
 package cn.shan.saw.auth;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @ComponentScan("cn.shan.saw.auth")
 @EnableDiscoveryClient
+@MapperScan(basePackages = {"cn.shan.saw.auth.mapper"})
 public class SawAuthApplication {
 
 	public static void main(String[] args) {
